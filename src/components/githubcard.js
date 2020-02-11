@@ -4,8 +4,9 @@ import {
     Card,
     Image,
     Heading,
-    Text,
-    Link
+    Flex,
+    Link,
+    Button
 } from 'rebass'
 
 class GithubCard extends React.Component {
@@ -21,18 +22,17 @@ class GithubCard extends React.Component {
                     mx={2}
                     sx={{
                         p: 1,
-                        borderRadius: 2,
                         boxShadow: '0 0 16px rgba(0, 0, 0, .25)',
                     }}>
                     <Image src={this.props.image} />
-                    <Box px={2}>
+                    <Flex px={2} py={2} justifyContent='space-between' alignItems='center'>
                         <Heading as='h3'>
                             {this.props.title}
                         </Heading>
-                        <Link href={this.props.link}>
-                            {this.props.link}
-                        </Link>
-                    </Box>
+                        <Button variant='outline'>
+                            <Link  href={this.props.link} sx={{color: 'white', textDecoration: 'none'}}>Github</Link>
+                        </Button>
+                    </Flex>
                 </Card>
             </Box>)
     }

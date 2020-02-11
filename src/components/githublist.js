@@ -35,14 +35,17 @@ class GithubList extends React.Component {
     render() {
         return (
 
-            <Box maxWidth='900px' margin='0 auto'>
+            <Flex maxWidth={'900px'} margin='0 auto' flexDirection='column' alignItems='center'>
                 <Flex
+                    sx={{
+                        minWidth: ['282px', '282px', '582px', '882px'],
+                    }}
                     px={2}
                     mx={2}
                     color='white'
-                    bg='secondary'
+                    bg='primary'
                     alignItems='center'>
-                    <Text p={2} fontWeight='bold'>Github Friends</Text>
+                    <Text p={2} fontWeight='bold'>My Github Followers</Text>
                    
                 </Flex>
 
@@ -50,7 +53,7 @@ class GithubList extends React.Component {
                     {this.state.followers.map((item) => { return (<GithubCard key={item.id} image={item.avatar_url} title={item.login} link={item.html_url} />) })}
                 </Flex>
 
-            </Box>
+            </Flex>
         )
     }
 
