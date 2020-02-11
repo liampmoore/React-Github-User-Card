@@ -1,5 +1,5 @@
 import React from 'react';
-import {Box, Flex} from 'rebass';
+import { Box, Flex, Text, Link} from 'rebass';
 import axios from 'axios';
 
 import GithubCard from './githubcard';
@@ -33,15 +33,24 @@ class GithubList extends React.Component {
     }
 
     render() {
-        return ( 
-        
-        <Box maxWidth='1000px' margin='0 auto'>
-        
-        <Flex flexWrap='wrap' width='100%' alignItems='center' justifyContent='center'> 
-            {this.state.followers.map((item) => { return (<GithubCard key={item.id} image={item.avatar_url} title={item.login} link={item.html_url} />) } ) }
-            </Flex>
-            
-            </Box>    
+        return (
+
+            <Box maxWidth='900px' margin='0 auto'>
+                <Flex
+                    px={2}
+                    mx={2}
+                    color='white'
+                    bg='secondary'
+                    alignItems='center'>
+                    <Text p={2} fontWeight='bold'>Github Friends</Text>
+                   
+                </Flex>
+
+                <Flex flexWrap='wrap' width='100%' alignItems='center' justifyContent='center'>
+                    {this.state.followers.map((item) => { return (<GithubCard key={item.id} image={item.avatar_url} title={item.login} link={item.html_url} />) })}
+                </Flex>
+
+            </Box>
         )
     }
 

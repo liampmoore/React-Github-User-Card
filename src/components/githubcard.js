@@ -17,6 +17,8 @@ class GithubCard extends React.Component {
         return (
             <Box width={300}>
                 <Card
+                    my={2}
+                    mx={2}
                     sx={{
                         p: 1,
                         borderRadius: 2,

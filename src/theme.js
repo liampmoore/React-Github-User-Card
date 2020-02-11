@@ -8,5 +8,7 @@ export default {
       text: '#000',
       background: '#fff',
       primary: '#33e',
+      secondary: '#9d29c5'
+    
     },
   }
