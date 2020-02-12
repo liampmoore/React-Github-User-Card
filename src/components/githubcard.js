@@ -24,12 +24,12 @@ class GithubCard extends React.Component {
                         p: 1,
                         boxShadow: '0 0 16px rgba(0, 0, 0, .25)',
                     }}>
-                    <Image src={this.props.image} />
+                    <Image src={this.props.image}/>
                     <Flex px={2} py={2} justifyContent='space-between' alignItems='center'>
                         <Heading as='h3'>
                             {this.props.title}
                         </Heading>
-                        <Button variant='outline'>
+                        <Button sx={{borderRadius: '2px'}}>
                             <Link  href={this.props.link} sx={{color: 'white', textDecoration: 'none'}}>Github</Link>
                         </Button>
                     </Flex>
